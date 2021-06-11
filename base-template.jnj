@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top py-0 bg-dark text-light">
+    <nav class="navbar navbar-expand navbar-light fixed-top py-0 bg-dark text-light">
         <div class="container">
             <a class="navbar-brand text-light" href="/index.html">
                 Baptiste Nicolet
