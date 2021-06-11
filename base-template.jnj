@@ -1,0 +1,65 @@
+{% set description = description|default('Academic website for Baptiste Nicolet') -%}
+{% set subtitle = subtitle|default('') -%}
+{% set title = title|default('Baptiste Nicolet' ~ subtitle) -%}
+{% set siteroot = siteroot|default('') -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+
+    <title>{{title}}</title>
+    {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 bg-dark text-light">
+        <div class="container">
+                <a class="navbar-brand text-light" href="/index.html">
+                    Baptiste Nicolet
+                </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="icon" href="https://github.com/bathal1">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://scholar.google.com/citations?hl=en&user=ELcZ3isAAAAJ">
+                            <i class="ai ai-google-scholar-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://www.linkedin.com/in/baptiste-nicolet-44561b134/?locale=en_US">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://twitter.com/b_nicolet">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <!-- .container -->
+
+    <div class="container bg-light" id="footer">
+        <p>&copy; 2021{{"-%d" % current_year if current_year!=2021}} Baptiste Nicolet</p>
+    </div>
+
+    {% block endmatter %}
+
+    {% endblock %}
+</body>
+</html>

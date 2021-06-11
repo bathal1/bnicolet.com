@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Convergence analysis for anisotropic monte carlo sampling spectra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 bg-dark text-light">
+        <div class="container">
+                <a class="navbar-brand text-light" href="/index.html">
+                    Baptiste Nicolet
+                </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="icon" href="https://github.com/bathal1">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://scholar.google.com/citations?hl=en&user=ELcZ3isAAAAJ">
+                            <i class="ai ai-google-scholar-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://www.linkedin.com/in/baptiste-nicolet-44561b134/?locale=en_US">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://twitter.com/b_nicolet">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <h1 class="row-margin-10">Convergence analysis for anisotropic monte carlo sampling spectra</h1>
+
+    <div>
+        <span>
+<a href="http://www.cs.dartmouth.edu/~gsingh/">Gurprit Singh</a><sup><small>1</small></sup></span>
+        <span>
+<a href="https://www.cs.dartmouth.edu/~wjarosz/">Wojciech Jarosz</a><sup><small>1</small></sup></span>
+    </div>
+
+    <div>
+        <span><sup><small>1</small></sup><span>Dartmouth College</span></span>
+    </div>
+
+    <h4>
+In <em>ACM Transactions on Graphics (Proceedings of SIGGRAPH)</em>, 2017    </h4>
+
+
+    <div class="row-margin-10">
+        <h3>Abstract</h3>
+        <div>
+            <p>
+                Traditional Monte Carlo (MC) integration methods use point samples to numerically approximate the underlying integral. This approximation introduces variance in the integrated result, and this error can depend critically on the sampling patterns used during integration. Most of the well-known samplers used for MC integration in graphics—e.g. jittered, Latin-hypercube (N-rooks), multijittered—are anisotropic in nature. However, there are currently no tools available to analyze the impact of such anisotropic samplers on the variance convergence behavior of Monte Carlo integration. In this work, we develop a Fourier-domain mathematical tool to analyze the variance, and subsequently the convergence rate, of Monte Carlo integration using any arbitrary (anisotropic) sampling power spectrum. We also validate and leverage our theoretical analysis, demonstrating that judicious alignment of anisotropic sampling and integrand spectra can improve variance and convergence rates in MC rendering, and that similar improvements can apply to (anisotropic) deterministic samplers.
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <h3>Downloads</h3>
+        <div>
+            <ul class="list-unstyled">
+                <li>
+                    <h5>Publication:</h5>
+                    <ul class="fa-ul">
+                        <li class="doi-link">
+                            <span class="fa-li"><i class="far fa-file-pdf" aria-hidden="true"></i></span>
+                            <a href="https://doi.org/10.1145/3072959.3073656">Publisher's official version (may require a subscription)</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div>
+        <h3 class="panel-title">Reference</h3>
+        <div>
+<a href="http://www.cs.dartmouth.edu/~gsingh/">Gurprit Singh</a>, <a href="https://www.cs.dartmouth.edu/~wjarosz/">Wojciech Jarosz</a>.            Convergence analysis for anisotropic monte carlo sampling spectra.
+            <em>ACM Transactions on Graphics (Proceedings of <b>SIGGRAPH</b>)</em>, 36(4), July 2017.
+        </div>
+
+        <pre class="bibtex">@article{singh17convergence,
+    author = "Singh, Gurprit and Jarosz, Wojciech",
+    title = "Convergence Analysis for Anisotropic Monte Carlo Sampling Spectra",
+    journal = "{ACM} Transactions on Graphics (Proceedings of SIGGRAPH)",
+    volume = "36",
+    number = "4",
+    year = "2017",
+    month = jul,
+    doi = "10.1145/3072959.3073656",
+    keywords = "stochastic sampling, signal processing, Fourier transform, Power spectrum"
+}
+</pre>
+    </div>
+    </div>
+    <!-- .container -->
+
+    <div class="container bg-light" id="footer">
+        <p>&copy; 2021 Baptiste Nicolet</p>
+    </div>
+
+
+</body>
+</html>

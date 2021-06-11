@@ -1,0 +1,82 @@
+p.reverse {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: left;
+    user-select: none;
+}
+
+a {
+    color: #164987;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+nav a:hover {
+	color: #8c8c8c;
+}
+
+.row-margin-05 { margin-top: 0.5em; }
+.row-margin-10 { margin-top: 1.0em; }
+.row-margin-20 { margin-top: 2.0em; }
+.row-margin-30 { margin-top: 3.0em; }
+
+.text-align-justify { text-align: justify;}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.icon {
+    font-size: 40px;
+    color: #ffffff;
+    margin-right: 0.25em;
+}
+
+.profile {
+    border: 3px solid #454545;
+}
+
+.thumbnail {
+    border: 1px solid #ffffff;
+    border-radius: 5%;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    transition: all ease 100ms;
+}
+
+ul.inline {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+pre.bibtex {
+    padding: 1em;
+    user-select: all;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+h2 {
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.container {
+    width: 1000px;
+}
+
+body {
+    padding-top: 65px;
+}
+
+.container h3 {
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.navbar-brand {
+    font-size: 150%;
+}

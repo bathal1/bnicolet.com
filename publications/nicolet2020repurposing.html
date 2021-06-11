@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Repurposing a relighting network for realistic compositions of captured scenes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0 bg-dark text-light">
+        <div class="container">
+                <a class="navbar-brand text-light" href="/index.html">
+                    Baptiste Nicolet
+                </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="icon" href="https://github.com/bathal1">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://scholar.google.com/citations?hl=en&user=ELcZ3isAAAAJ">
+                            <i class="ai ai-google-scholar-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://www.linkedin.com/in/baptiste-nicolet-44561b134/?locale=en_US">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://twitter.com/b_nicolet">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <h1 class="row-margin-10">Repurposing a relighting network for realistic compositions of captured scenes</h1>
+
+    <div>
+        <span>
+<a href="/index.html">Baptiste Nicolet</a><sup><small>1,2,3</small></sup></span>
+        <span>
+<a href="https://julienphilip.com/">Julien Philip</a><sup><small>1</small></sup></span>
+        <span>
+<a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a><sup><small>1</small></sup></span>
+    </div>
+
+    <div>
+        <span><sup><small>1</small></sup><span>Université Côte d'Azur, Inria</span></span>
+        <span><sup><small>2</small></sup><span>École Polytechnique, IP Paris</span></span>
+        <span><sup><small>3</small></sup><span>Télécom Paris, IP Paris</span></span>
+    </div>
+
+    <h4>
+In <em>Proceedings of the ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games</em>, 2020    </h4>
+
+    <div>
+        <img src="images/nicolet2020repurposing-teaser.png" alt="Teaser" style="max-width: 100%;"/>
+
+        <div>
+            Example of a composition of two captured historical landmarks using our method. We extract the geometry of one(b) from a multi-view dataset, and import it into the other (a). Our method ensures coherent treatment of lighting and shadows,producing a realistic result (c).
+        </div>
+    </div>
+
+    <div class="row-margin-10">
+        <h3>Abstract</h3>
+        <div>
+            <p>
+                Multi-view stereo can be used to rapidly create realistic virtual content, such as textured meshes or a geometric proxy for freeviewpoint Image-Based Rendering (IBR). These solutions greatly simplify the content creation process compared to traditional methods, but it is difficult to modify the content of the scene.We propose a novel approach to create scenes by composing (parts of) multiple captured scenes. The main difficulty of such compositions is that lighting conditions in each captured scene are different; to obtain a realistic composition we need to make lighting coherent. We propose a two-pass solution, by adapting a multi-view relighting network. We first match the lighting conditions of each scene separately and then synthesize shadows between scenes in a subsequent pass. We also improve the realism of the composition by estimating the change in ambient occlusion in contact areas between parts and compensate for the color balance of the different cameras used for capture. We illustrate our method with results on multiple compositions of outdoor scenes and show its application to multi-view image composition, IBR and textured mesh creation.
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <h3>Downloads</h3>
+        <div>
+            <ul class="list-unstyled">
+                <li>
+                    <h5>Publication:</h5>
+                    <ul class="fa-ul">
+                        <li class="pdf">
+                            <span class="fa-li"><i class="far fa-file-pdf" aria-hidden="true"></i></span>
+                            <a href="nicolet2020repurposing.pdf">Paper</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <h5>Video:</h5>
+                    <ul class="fa-ul">
+                        <li class="mp4">
+                            <span class="fa-li"><i class="far fa-file-video"></i></span>
+                            <a href="nicolet2020repurposing.mp4">Video (full-quality)</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div>
+        <h3 class="panel-title">Reference</h3>
+        <div>
+<a href="/index.html">Baptiste Nicolet</a>, <a href="https://julienphilip.com/">Julien Philip</a>, <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a>.            Repurposing a relighting network for realistic compositions of captured scenes.
+            <em>Proceedings of the ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games</em>, May 2020.
+        </div>
+
+        <pre class="bibtex">@inproceedings{nicolet2020repurposing,
+    author = "Nicolet, Baptiste and Philip, Julien and Drettakis, George",
+    title = "Repurposing a Relighting Network for Realistic Compositions of Captured Scenes",
+    booktitle = "Proceedings of the ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games",
+    month = may,
+    year = "2020",
+    organization = "ACM",
+    keywords = "Image Manipulation, Image-based rendering, Image processing",
+    url = "http://www-sop.inria.fr/reves/Basilic/2020/NPD20a"
+}
+</pre>
+    </div>
+    </div>
+    <!-- .container -->
+
+    <div class="container bg-light" id="footer">
+        <p>&copy; 2021 Baptiste Nicolet</p>
+    </div>
+
+
+</body>
+</html>

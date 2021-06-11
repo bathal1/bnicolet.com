@@ -1,0 +1,123 @@
+%
+% Define venue/journal string here and reuse in your bib entries for
+% consistency. I include a list of many of the venues I often cite below.
+% There are several reasons for doing this:
+%
+% Consistency: many online sources list the same venues slightly differently.
+%
+% History: Many journals/conferences have complicated histories. Some
+% conferences change name (e.g., the rendering workshop turning into the
+% rendering symposium), they also change the way they are published (e.g.,
+% starting in 2008 EGSR is published in the journal Computer Graphics Forum).
+%
+% Define a string eliminates the need to remember the exact cutoffs and names.
+%
+
+% EGXR citations
+% Since 2008, papers accepted at the Eurographics <Event> on Rendering are published as issue 4 of the journal Computer Graphics Forum.
+@string{cgf_egsr08  = {Computer Graphics Forum (Proceedings of the Eurographics Symposium on Rendering)}}
+% From 1995 to 2007, papers accepted at the Eurographics <Event> on Rendering were published in a book called Rendering Techniques <year>.
+@string{egsr03-07   = {Rendering Techniques (Proceedings of the Eurographics Symposium on Rendering)} }
+% The Eurographics Symposium on Rendering got its new Symposium status in 2003
+@string{egwr95-02   = {Rendering Techniques (Proceedings of the Eurographics Workshop on Rendering)} }
+% In 1994, papers accepted at the Eurographics Workshop on Rendering were published in a book called Photorealistic Rendering Techniques.
+@string{egwr94      = {Photorealistic Rendering Techniques (Proceedings of the Eurographics Workshop on Rendering}}
+% In 1992 proceedings were published in a book by Consolidation Express.
+@string{egwr92      = {Third Eurographics Workshop on Rendering}}
+% In 1991 the book was called Photorealistic Rendering in Computer Graphics, and in 1990 it was Photorealism in Computer Graphics.
+
+% various other CGF publications
+@string{cgf         = {Computer Graphics Forum}}
+@string{cgf_eg      = {Computer Graphics Forum (Proceedings of Eurographics)}}
+@string{cgf_pg      = {Computer Graphics Forum (Proceedings of Pacific Graphics)}}
+
+% SIGGRAPH proceedings
+% the first SIGGRAPH was not published in a separate journal
+@string{siggraph74       = {Annual Conference Series (Proceedings of SIGGRAPH)}}
+% SIGGRAPH between 1975 and 1992 (inclusive) were published in Computer Graphics
+@string{siggraph75-92    = {Computer Graphics (Proceedings of SIGGRAPH)}}
+% SIGGRAPH between 1993 and 2001 inclusive were not published elsewhere
+@string{siggraph93-01    = {Annual Conference Series (Proceedings of SIGGRAPH)} }
+% SIGGRAPH starting with 2002 are published in TOG
+@string{tog_siggraph02   = {{ACM} Transactions on Graphics (Proceedings of SIGGRAPH)}}
+@string{tog_siggraphasia = {{ACM} Transactions on Graphics (Proceedings of SIGGRAPH Asia)}}
+@string{tog              = {{ACM} Transactions on Graphics}}
+
+@string{gi          = {Proceedings of Graphics Interface}}
+@string{hpg         = {Proceedings of High Performance Graphics}}
+@string{vc_cgi      = {The Visual Computer (Proceedings of CGI)}}
+@string{i3d         = {Proceedings of the Symposium on Interactive 3D Graphics and Games}}
+@string{jgt         = {Journal of Graphics, GPU, and Game Tools}}
+@string{tap         = {ACM TAP}}
+@string{tvcg        = {IEEE TVCG}}
+@string{irt         = {Proceedings of IEEE Symposium on Interactive Ray Tracing}}
+@string{pg          = {Proceedings of Pacific Graphics}}
+@string{vmv         = {Proceedings of Vision, Modeling and Visualization}}
+@string{gafa        = {{GAFA} Geometric \& Functional Analysis}}
+@string{cacm        = {Communications of the ACM}}
+
+@string{ACM_COPY          = {© The Author(s) / ACM. This is the author's version of the work. It is posted here for your personal use. Not for redistribution. The definitive Version of Record is available at <a href="http://doi.acm.org">doi.acm.org</a>.}}
+@string{EG_COPY           = {© The Author(s). This is the author's version of the work. It is posted here by permission of The Eurographics Association for your personal use. Not for redistribution. The definitive version is available at <a href="http://diglib.eg.org">diglib.eg.org</a>.}}
+
+%
+% end string defines
+%
+
+@inproceedings{nicolet2020pair,
+  title={Pair Correlation Functions with Free-Form Boundaries for Distribution Inpainting and Decomposition},
+  author={Nicolet, Baptiste and Ecormier-Nocca, Pierre and Memari, Pooran and Cani, Marie-Paule},
+  booktitle={Eurographics},
+  year={2020},
+  abstract={Pair Correlation Functions (PCF) have been recently spreading as a reliable representation for distributions, enabling the
+			efficient synthesis of point-sets, vector textures and object placement from examples. In this work we introduce a triangulationbased
+			local filtering method to extend PCF-based analysis to exemplars with free-form boundaries. This makes PCF applicable
+			to new problems such as the inpainting of missing parts in an input distribution, or the decomposition of complex,
+			non-homogeneous distributions into a set of coherent classes, in which each category of points can be studied together with
+			their intra and inter-class correlations.},
+  extra-affiliation-1={École Polytechnique, CNRS (LIX), IP Paris},
+  extra-author-affiliation-1={1}, extra-author-affiliation-2={1},
+  extra-author-affiliation-3={1}, extra-author-affiliation-4={1},
+  extra-caption={Application of extended PCFs to the inpainting of
+				distributions, illustrated by the re-planting of a partially destroyed forest
+				(a,b).From  an  incomplete  dataset  (a),  our  method  accurately  estimates
+				free-form  boundaries  (c)  and  compensates  from  missing  points
+				when learning PCFs (d). This allows us to restore the perceived initial
+				distribution at the synthesis stage (b)}
+}
+
+@InProceedings{nicolet2020repurposing,
+  author       = {Nicolet, Baptiste and Philip, Julien and Drettakis, George},
+  title        = {Repurposing a Relighting Network for Realistic Compositions of Captured Scenes},
+  booktitle    = {Proceedings of the ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games},
+  month        = {5},
+  year         = {2020},
+  organization = {ACM},
+  keywords     = {Image Manipulation, Image-based rendering, Image processing},
+  url          = {http://www-sop.inria.fr/reves/Basilic/2020/NPD20a},
+  abstract={Multi-view stereo can be used to rapidly create realistic virtual
+			content, such as textured meshes or a geometric proxy for freeviewpoint
+			Image-Based Rendering (IBR). These solutions greatly simplify the content
+			creation process compared to traditional methods, but it is difficult to modify
+			the content of the scene.We propose a novel approach to create scenes by
+			composing (parts of) multiple captured scenes. The main difficulty of such
+			compositions is that lighting conditions in each captured scene are different;
+			to obtain a realistic composition we need to make lighting coherent. We propose
+			a two-pass solution, by adapting a multi-view relighting network. We first match
+			the lighting conditions of each scene separately and then synthesize shadows
+			between scenes in a subsequent pass. We also improve the realism of the
+			composition by estimating the change in ambient occlusion in contact areas
+			between parts and compensate for the color balance of the different cameras used
+			for capture. We illustrate our method with results on multiple compositions of
+			outdoor scenes and show its application to multi-view image composition, IBR and
+			textured mesh creation.},
+  extra-affiliation-1={Université Côte d'Azur, Inria},
+  extra-affiliation-2={École Polytechnique, IP Paris},
+  extra-affiliation-3={Télécom Paris, IP Paris},
+  extra-author-affiliation-1={1,2,3}, extra-author-affiliation-2={1},
+  extra-author-affiliation-3={1},
+  extra-caption={Example of a composition of two
+				captured historical landmarks using our method. We extract the geometry of
+				one(b) from a multi-view dataset, and import it into the other (a). Our method
+				ensures coherent treatment of lighting and shadows,producing a realistic
+				result (c).}
+}

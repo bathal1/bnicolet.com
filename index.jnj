@@ -1,0 +1,156 @@
+{% extends "base-template.jnj" %}
+{% block title %}Home {% endblock %}
+{% block content %}
+
+
+<div class="row justify-content-center row-margin-20">
+    <div class="col-sm-3">
+        <img class="img-fluid rounded-circle profile" src="profile.png" alt="Profile Picture"/>
+    </div>
+    <div class="col-sm-5 offset-sm-2 align-self-center">
+        <h1>Baptiste Nicolet<h1/>
+        <h4><em>Doctoral Assistant</em></h4>
+        <ul class="fa-ul">
+            <li>
+                <span class="fa-li"><i class="fas fa-map-pin fa-lg"></i></span>
+                <a href="http://rgl.epfl.ch">Realistic Graphics Lab</a><br>
+                École polytechnique fédérale de Lausanne (EPFL)<br>
+                <a href="http://plan.epfl.ch/?reset_session&room=BC_350">BC 350</a><br>
+                CH-1015 Lausanne <br>
+                Switzerland
+            </li>
+            <li>
+                <span class="fa-li"><i class="fas fa-envelope fa-lg"></i></span>
+                <p class="reverse">hc.lfpe@telocin.etsitpab</p>
+            </li>
+            <li>
+                <span class="fa-li"><i class="fas fa-file-alt fa-lg"></i></span>
+                <a href="CV.pdf"/>CV</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h2 id="about">About me</h2>
+<p>
+    I am a first year PhD student in the
+    <a href="http://rgl.epfl.ch">Realistic Graphics Lab</a> at
+    <a href="https://ic.epfl.ch/">EPFL</a>, supervised by
+    <a href="http://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a>. Prior
+    to joining EPFL, I studied at
+    <a href="https://www.polytechnique.edu/en">École polytechnique</a>
+    and <a href="https://www.telecom-paris.fr/en/home">Télécom Paris</a>. As
+    part of my Master studies, I interned in
+    <a href="http://www-sop.inria.fr/members/George.Drettakis/">George
+    Drettakis</a>'s team at <a href="https://team.inria.fr/graphdeco/">Inria
+    Sophia-Antipolis</a>, where I worked on Image-Based Rendering.
+</p>
+<p>
+    My research currently focuses on designing robust differentiable rendering
+    algorithms to solve challenging inverse problems involving light transport.
+</p>
+
+<h2 id="publications">Publications</h2>
+<!--
+    <p>
+        This is an example academic publication page, along with accompanying project pages and downloads. You can also check out the <a href="{{ siteroot }}example_cv.pdf">CV</a> generated from the same bib file as a PDF download</a>.
+    </p>
+
+    <div class="alert alert-info text-right" role="alert">
+        <strong>Total citation count: {{ total_citations }}</strong>.<br />
+        <small>Citation counts are scraped from my Google Scholar profile. Numbers are approximate.</small>
+    </div>
+-->
+<!-- Tab panes -->
+<div class="content">
+    <div id="allPublications">
+
+        <!-- <h3>Journals and Conferences</h3> -->
+        {% for year in years %}
+        <!-- <h4 id="year{{ year.year }}">{{ year.year }}</h4> -->
+        <ul class="list-unstyled">
+        {% for paper in year.papers|rejectattr("type", "equalto", "patent") %}
+            <li>
+                <div class="row justify-content-center row-margin-20">
+                    <div class="col-sm-2">
+                        {% if paper.url %}
+                        <a href="publications/{{ paper.url }}">
+                        {% endif %}
+                            {% if paper.thumbnail %}
+                            <img class="img-fluid thumbnail" src="publications/{{paper.thumbnail}}" alt="thumbnail"/>
+                            {% endif %}
+                        {% if paper.url %}
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-10">
+                        <div>
+                            {% if paper.url %}
+                            <a href="{% if not paper.external -%}publications/{% endif -%}{{ paper.url }}"><b><h4>{{ paper.title }}</h4></b></a>
+                            {% else %}
+                            {{ paper.title }}
+                            {% endif %}
+                        </div>
+                        <div>{% if paper.authors %}{{ paper.authors|join(', ', attribute='name') }}{% endif %}{% if paper.editors %}{{ paper.editors|join(', ', attribute='name') }}, editors{% endif %}.</div>
+                        <div><em>{{ paper.venue|replace("SIGGRAPH Asia)", "<b>SIGGRAPH Asia</b>)")|replace("SIGGRAPH)", "<b>SIGGRAPH</b>)")}}</em>{% if paper.volume %}, {{ paper.volume }}{% if paper.number %}({{ paper.number }}){% endif %}{% if paper.pages %}:{{ paper.pages }}{% endif %}{% endif %}, {{ paper.month }}{% if paper.year %} {{ paper.year }}{% endif%}.</div>
+                        {% if paper.accolades %}<div>{{ paper.accolades }}</div>{% endif %}
+                        <ul class="list-inline">
+                            {% if paper.external -%}
+                                <li class="external-link list-inline-item">
+                                    <a href="{{ paper.url }}">Project webpage (external link)</a>
+                                </li>
+                            {% else -%}
+                                <li class="page list-inline-item">
+                                    <a class="btn btn-outline-secondary" href="publications/{{ paper.url }}">
+                                        <i class="fas fa-globe"></i> Project Page
+                                    </a>
+                                </li>
+                            {% endif -%}
+                            {% for link in paper.quicklinks %}
+                                <li class="{{ link.type }} list-inline-item">
+                                    <a class="btn btn-outline-secondary" href="{% if not link.external -%}publications/{% endif -%}{{ link.url }}">
+                                        {% if link.type=='pdf' %} <i class="far fa-file-pdf"></i>
+                                        {% else %} <i class="far fa-file"></i>
+                                        {% endif %}
+                                        {{ link.text_short }}
+                                    </a>
+                                </li>
+                            {% endfor -%}
+                        </ul>
+                        {% if paper.scholar_citations %}
+                        <div><a href="{{ paper.scholar_citations.url }}">Citation count: {{ paper.scholar_citations.count }}</a></div>
+                        {% endif %}
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+        {% endfor %}
+
+    <!--
+        <h3 id="patents">Patents</h3>
+        <ul>
+        {% for year in years %}
+            {% for paper in year.papers|selectattr("type", "equalto", "patent") %}
+            <li>
+                <div class="publication-title">
+                    {% if paper.url %}
+                    <a href="{{ paper.url }}">{{ paper.title }}</a>
+                    {% else %}
+                    {{ paper.title }}
+                    {% endif %}
+                </div>
+                <div>{{ paper.authors|join(', ', attribute='name') }}.</div>
+                <div><em>{{ paper.venue }}</em>{% if paper.volume and paper.number %}, {{ paper.volume }}({{ paper.number }}){% endif %}{% if paper.month %}, {{ paper.month }}{% endif %}{% if paper.year %} {{ paper.year }}{% endif%}.</div>
+                <ul>
+                    <li class="external-link"><a href="{{ paper.url }}">patent (external link)</a></li>
+{% for link in paper.quicklinks %}<li class="{{ link.type }}"><a class="btn btn-primary" href="{% if not link.external -%}publications/{% endif -%}{{ link.url }}">{{ link.text_short }}</a></li>{% endfor -%}
+                </ul>
+            </li>
+            {% endfor %}
+        {% endfor %}
+        </ul>
+    -->
+    </div>
+</div>
+{% endblock %}
