@@ -121,3 +121,70 @@
 				ensures coherent treatment of lighting and shadows,producing a realistic
 				result (c).}
 }
+
+@article{Nicolet2021Large,
+	author = {Baptiste Nicolet and Alec Jacobson and Wenzel Jakob},
+	title = {Large Steps in Inverse Rendering of Geometry},
+	journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia)},
+	volume = {40},
+	number = {6},
+	year = {2021},
+	month = dec,
+	doi = {10.1145/3478513.3480501},
+	url = {https://rgl.epfl.ch/publications/Nicolet2021Large},
+	extra-affiliation-1={École Polytechnique Fédérale de Lausanne (EPFL), Switzerland},
+	extra-affiliation-2={University of Toronto, Canada},
+  	extra-author-affiliation-1={1},
+	extra-author-affiliation-2={2},
+  	extra-author-affiliation-3={1},
+	abstract = {
+		Inverse reconstruction from images is a central problem in many
+		scientific and engineering disciplines. Recent progress on
+		differentiable rendering has led to methods that can efficiently
+		differentiate the full process of image formation with respect to
+		millions of parameters to solve such problems via gradient-based
+		optimization. At the same time, the availability of cheap derivatives
+		does not necessarily make an inverse problem easy to solve. Mesh-based
+		representations remain a particular source of irritation: an adverse
+		gradient step involving vertex positions could turn parts of the mesh
+		inside-out, introduce numerous local self-intersections, or lead to
+		inadequate usage of the vertex budget due to distortion. These types of
+		issues are often irrecoverable in the sense that subsequent optimization
+		steps will further exacerbate them. In other words, the optimization
+		lacks robustness due to an objective function with substantial
+		non-convexity.Such robustness issues are commonly mitigated by imposing
+		additional regularization, typically in the form of Laplacian energies
+		that quantify and improve the smoothness of the current iterate.
+		However, regularization introduces its own set of problems: solutions
+		must now compromise between solving the problem and being smooth.
+		Furthermore, gradient steps involving a Laplacian energy resemble
+		Jacobi's iterative method for solving linear equations that is known for
+		its exceptionally slow convergence. We propose a simple and practical
+		alternative that casts differentiable rendering into the framework of
+		preconditioned gradient descent. Our preconditioner biases gradient
+		steps towards smooth solutions without requiring the final solution to
+		be smooth. In contrast to Jacobi-style iteration, each gradient step
+		propagates information among all variables, enabling convergence using
+		fewer and larger steps. Our method is not restricted to meshes and can
+		also accelerate the reconstruction of other representations, where
+		smooth solutions are generally expected. We demonstrate its superior
+		performance in the context of geometric optimization and texture
+		reconstruction.
+		},
+	extra-caption = {
+		(a) Inverse reconstruction of the Nefertiti bust from a spherical starting guess
+		with 25 rendered views (1 shown). (b) Naïve application of a differentiable
+		renderer produces an unusable tangled mesh when gradient steps pull on the
+		silhouette without regard for distortion or self-intersections. (c)
+		Regularization can alleviate such problems by making the optimization aware of
+		mesh quality. On the flipside, this penalizes non-smooth parts of the geometry
+		and causes unsatisfactory convergence in gradient-based optimizers. While the
+		final mesh undeniably looks better, a closer inspection of the wireframe
+		rendering reveals countless self-intersections. (d) Our method addresses both
+		problems and converges to a high-quality mesh. (e) Combined with an isotropic
+		remeshing step, our reconstruction captures fine details of the reference (f).
+		The hyper-parameters of each method were optimized to obtain the best
+		convergence at equal time. Self-intersections are shown in red.
+		}
+
+	}
