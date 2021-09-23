@@ -81,10 +81,16 @@
                 </li>
                 {% endif %}
 
-                {% if num_videos %}
+                {% if num_videos or video %}
                 <li>
                     <h5>Video:</h5>
                     <ul class="fa-ul">
+                        {% if video %}
+                        <li class="mp4">
+                            <span class="fa-li"><i class="far fa-file-video"></i></span>
+                            <a href="//{{video}}">Video</a>
+                        </li>
+                        {% endif %}
                         {% for download in Video_downloads %}
                         <li class="{{download.type}}">
                             <span class="fa-li"><i class="far fa-file-video"></i></span>
