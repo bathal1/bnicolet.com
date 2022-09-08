@@ -123,6 +123,7 @@
                         {% endif %}
                     </div>
                 </div>
+                <br/>
             </li>
         {% endfor %}
         </ul>
@@ -156,4 +157,38 @@
 </div>
 
 <h2 id="software">Software</h2>
+<div class="content">
+    <div id="allSoftware">
+        <ul class="list-unstyled">
+            {% for software in softwares %}
+                <li>
+                    <div class="row row-margin-20">
+                        <div class="col-4 col-sm-3 col-md-2">
+                            {% if software.url %}
+                            <a href="{{ software.url }}">
+                            {% endif %}
+                                {% if software.thumbnail %}
+                                <img class="img-fluid thumbnail" src="publications/{{software.thumbnail}}" alt="thumbnail"/>
+                                {% endif %}
+                            {% if software.url %}
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="col-8 col-sm-9 col-md-10">
+                            <div>
+                                {% if software.url %}
+                                <a href="{{ software.url }}"><b><h4>{{software.title}}</h4></b></a>
+                                {% else %}
+                                {{ software.title }}
+                                {% endif %}
+                            </div>
+                            <div> {{software.description}} </div>
+                        </div>
+                    </div>
+                    <br/>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock %}
