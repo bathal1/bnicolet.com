@@ -5,7 +5,7 @@
 
 <div class="row justify-content-center row-margin-20">
     <div class="col-sm-4 d-flex align-items-center">
-        <img class="img-fluid rounded-circle profile" src="profile.png" alt="Profile Picture"/>
+        <img class="img-fluid rounded-circle profile" src="profile.jpg" alt="Profile Picture"/>
     </div>
     <div class="col-sm-5 offset-sm-1">
         <h1>Baptiste Nicolet<h1/>
@@ -108,8 +108,9 @@
                             {% endif -%}
                             {% for link in paper.quicklinks %}
                                 <li class="{{ link.type }} list-inline-item">
-                                    <a class="btn btn-outline-secondary" href="{% if not link.external -%}publications/{% endif -%}{{ link.url }}">
+                                    <a class="btn btn-outline-secondary" href="{% if link.type=='code' %} {{link.link}} {% else %}{% if not link.external -%}publications/{% endif -%}{{ link.url }}{% endif %}">
                                         {% if link.type=='pdf' %} <i class="far fa-file-pdf"></i>
+                                        {% elif link.type=='code' %} <i class="fab fa-github"></i>
                                         {% else %} <i class="far fa-file"></i>
                                         {% endif %}
                                         {{ link.text_short }}
@@ -153,4 +154,6 @@
     -->
     </div>
 </div>
+
+<h2 id="software">Software</h2>
 {% endblock %}

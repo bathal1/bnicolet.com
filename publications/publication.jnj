@@ -108,7 +108,7 @@
                 {% endif %}
 
                 {% if Data_downloads %}
-                <li>Data:
+            <li><h5>Data:</h5>
                     <ul class="fa-ul">
                         {% for download in Data_downloads %}
                         <li class="{{download.type}}">{{download.link}}</li>
@@ -118,10 +118,13 @@
                 {% endif %}
 
                 {% if Code_downloads %}
-                <li>Code:
+                <li><h5>Code:</h5>
                     <ul class="fa-ul">
                         {% for download in Code_downloads %}
-                        <li class="{{download.type}}">{{download.link}}</li>
+                        <li class="{{download.type}}">
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a href="{{download.link}}">{{download.text_short}}</a>
+                        </li>
                         {% endfor %}
                     </ul>
                 </li>
