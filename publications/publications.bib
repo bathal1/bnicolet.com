@@ -206,3 +206,53 @@
   	extra-code-title-2={Cholesky Solver},
 
 	}
+
+@article{Nicolet2023Recursive,
+    author = {Baptiste Nicolet and Fabrice Rousselle and Jan Novák and Alexander Keller and Wenzel Jakob and Thomas Müller},
+    title = {Recursive Control Variates for Inverse Rendering},
+    journal = {Transactions on Graphics (Proceedings of SIGGRAPH)},
+    volume = {42},
+    number = {4},
+    year = {2023},
+    month = aug,
+    doi = {10.1145/3592139},
+	url = {https://rgl.epfl.ch/publications/Nicolet2023Recursive},
+	extra-affiliation-1={École Polytechnique Fédérale de Lausanne (EPFL), Switzerland},
+	extra-affiliation-2={NVIDIA, Switzerland},
+	extra-affiliation-3={NVIDIA, Czech Republic},
+	extra-affiliation-4={NVIDIA, Germany},
+  	extra-author-affiliation-1={1,2},
+	extra-author-affiliation-2={2},
+  	extra-author-affiliation-3={3},
+  	extra-author-affiliation-4={4},
+  	extra-author-affiliation-5={1},
+  	extra-author-affiliation-6={2},
+	abstract = {
+		We present a method for reducing errors—variance and bias—in physically
+		based differentiable rendering (PBDR). Typical applications of PBDR
+		repeatedly render a scene as part of an optimization loop involving
+		gradient descent. The actual change introduced by each gradient descent
+		step is often relatively small, causing a significant degree of
+		redundancy in this computation. We exploit this redundancy by
+		formulating a gradient estimator that employs a recursive control
+		variate, which leverages information from previous optimization steps.
+		The control variate reduces variance in gradients, and, perhaps more
+		importantly, alleviates issues that arise from differentiating loss
+		functions with respect to noisy inputs, a common cause of drift to bad
+		local minima or divergent optimizations. We experimentally evaluate our
+		approach on a variety of path-traced scenes containing surfaces and
+		volumes and observe that primal rendering efficiency improves by a
+		factor of up to 10. },
+
+	extra-caption = {
+		We improve physically based differentiable rendering by introducing a
+		recursive control variate into the optimization loop. Left: a baseline
+		method [Vicini et al. 2021] repeatedly renders noisy images to compute
+		gradients. The noise leads to poor convergence. Right: applied on top of
+		the baseline, our recursive control variate reduces the noise using
+		information from similar renderings in prior optimization steps. This
+		leads to a reconstruction that is much closer to the reference image.
+		The plots show the evolution of the loss function and rendering variance
+		as the optimization progresses. }
+
+	}
