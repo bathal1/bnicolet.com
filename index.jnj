@@ -69,7 +69,7 @@
                             {{ paper.title }}
                             {% endif %}
                         </div>
-                        <div>{% if paper.authors %}{{ paper.authors|join(', ', attribute='name') }}{% endif %}{% if paper.editors %}{{ paper.editors|join(', ', attribute='name') }}, editors{% endif %}.</div>
+                        <div>{% if paper.authors %}{{ paper.authors|join(', ', attribute='name')|replace("Baptiste Nicolet", "<b>Baptiste Nicolet</b>") }}{% endif %}{% if paper.editors %}{{ paper.editors|join(', ', attribute='name') }}, editors{% endif %}.</div>
                         <div><em>{{ paper.venue|replace("SIGGRAPH Asia)", "<b>SIGGRAPH Asia</b>)")|replace("SIGGRAPH)", "<b>SIGGRAPH</b>)")}}</em>{% if paper.volume %}, {{ paper.volume }}{% if paper.number %}({{ paper.number }}){% endif %}{% if paper.pages %}:{{ paper.pages }}{% endif %}{% endif %}, {{ paper.month }}{% if paper.year %} {{ paper.year }}{% endif%}.</div>
                         {% if paper.accolades %}<div>{{ paper.accolades }}</div>{% endif %}
                         <ul class="list-inline">
