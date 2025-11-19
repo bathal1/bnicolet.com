@@ -13,15 +13,11 @@
         <ul class="fa-ul">
             <li>
                 <span class="fa-li"><i class="fas fa-map-pin fa-lg"></i></span>
-                <a href="http://rgl.epfl.ch">Realistic Graphics Lab</a><br>
-                École polytechnique fédérale de Lausanne (EPFL)<br>
-                <a href="http://plan.epfl.ch/?reset_session&room=BC_350">BC 350</a><br>
-                CH-1015 Lausanne <br>
-                Switzerland
+                Geneva, Switzerland
             </li>
             <li>
                 <span class="fa-li"><i class="fas fa-envelope fa-lg"></i></span>
-                <p class="reverse">hc.lfpe@telocin.etsitpab</p>
+                <p class="reverse">moc.telocinb@olleh</p>
             </li>
             <li>
                 <span class="fa-li"><i class="fas fa-file-alt fa-lg"></i></span>
@@ -33,17 +29,10 @@
 
 <h2 class="row-margin-10" id="about">About me</h2>
 <p>
-    I am a fourth year PhD student in the
-    <a href="http://rgl.epfl.ch">Realistic Graphics Lab</a> at
+    I am a Senior Research Scientist at <a href="https://research.nvidia.com/person/baptiste-nicolet">NVIDIA</a>.
+    Prior to joining NVIDIA, I obtained a Ph.D. from the <a href="http://rgl.epfl.ch">Realistic Graphics Lab</a> at
     <a href="https://ic.epfl.ch/">EPFL</a>, supervised by
-    <a href="http://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a>. Prior
-    to joining EPFL, I studied at
-    <a href="https://www.polytechnique.edu/en">École polytechnique</a>
-    and <a href="https://www.telecom-paris.fr/en/home">Télécom Paris</a>. As
-    part of my Master studies, I interned in
-    <a href="http://www-sop.inria.fr/members/George.Drettakis/">George
-    Drettakis</a>'s team at <a href="https://team.inria.fr/graphdeco/">Inria
-    Sophia-Antipolis</a>, where I worked on Image-Based Rendering.
+    <a href="http://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a>.
 </p>
 <p>
     My research currently focuses on designing robust differentiable rendering

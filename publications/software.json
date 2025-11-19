@@ -1,18 +1,22 @@
 [
     {
+        "title": "Dr.TVAM",
+        "description": "An inverse rendering framework for tomographic volumetric additive manufacturing.",
+        "url": "https://github.com/rgl-epfl/drtvam",
+        "thumbnail": "images/drtvam.png"
+    },
+    {
         "title": "Cholespy",
         "description": "An easily integrable Cholesky solver on CPU and GPU.",
         "url": "https://github.com/rgl-epfl/cholespy",
         "thumbnail": "images/cholespy.jpg"
     },
-
     {
         "title": "Large Steps - PyTorch",
         "description": "Implementation of our paper, 'Large Steps in Inverse Rendering of Geometry' in PyTorch. The main method is implemented as a PyTorch custom operator and we provide scripts to reproduce most experiments from the paper.",
         "url": "https://github.com/rgl-epfl/large-steps-pytorch",
         "thumbnail": "images/large-steps-pytorch.jpg"
     },
-
     {
         "title": "Mitsuba - Blender",
         "description": "Mitsuba integration add-on for Blender",

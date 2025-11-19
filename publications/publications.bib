@@ -225,6 +225,8 @@
   	extra-author-affiliation-4={2},
   	extra-author-affiliation-5={1},
   	extra-author-affiliation-6={2},
+  	extra-code-download-1={https://github.com/rgl-epfl/recursive_control_variates},
+  	extra-code-title-1={Reference implementation},
 	abstract = {
 		We present a method for reducing errors—variance and bias—in physically
 		based differentiable rendering (PBDR). Typical applications of PBDR
@@ -254,3 +256,30 @@
 		as the optimization progresses. }
 
 	}
+
+@article{Nicolet2024Inverse,
+    author = {Baptiste Nicolet and Felix Wechsler and Jorge Madrid-Wolff and Christophe Moser and Wenzel Jakob},
+    title = {Inverse Rendering for Tomographic Volumetric Additive Manufacturing},
+    journal = {Transactions on Graphics (Proceedings of SIGGRAPH Asia)},
+    volume = {43},
+    number = {6},
+    pages = {1-17},
+    year = {2024},
+    month = dec,
+    doi = {10.1145/3687924},
+	url = {https://rgl.epfl.ch/publications/Nicolet2024Inverse},
+	extra-affiliation-1={École Polytechnique Fédérale de Lausanne (EPFL), Switzerland},
+  	extra-author-affiliation-1={1},
+	extra-author-affiliation-2={1},
+  	extra-author-affiliation-3={1},
+  	extra-author-affiliation-4={1},
+  	extra-author-affiliation-5={1},
+	abstract = {
+Tomographic Volumetric Additive Manufacturing (TVAM) is an emerging 3D printing technology that can create complex objects in under a minute. The key idea is to project intense light patterns onto a rotating vial of photo-sensitive resin, causing polymerization where the cumulative dose of these patterns reaches the polymerization threshold. We formulate the pattern calculation as an inverse light transport problem and solve it via physically based differentiable rendering. In doing so, we address long-standing limitations of prior work by accurately modeling and correcting for scattering in composite resins, printing in non-symmetric vials, and supporting unusual printing geometries. We also introduce an improved discretization scheme that exploits the ray tracing operation to mitigate resolution-related artifacts in prints. We demonstrate the benefits of our method in real-world experiments, where our computed patterns produce prints with an improved fidelity.
+    },
+	extra-caption = {
+(a) Tomographic Volumetric Additive Manufacturing fabricates objects by projecting light patterns onto a rotating vial of photo-sensitive resin. We introduce a differentiable rendering framework that (b) can simulate scattering of light in arbitrary resins and (c)  compute appropriate patterns for fabrication. Our method enables several applications, such as (d) printing in scattering resins or (e) unusual geometries such as square vials.
+    },
+  	extra-code-download-1={https://github.com/rgl-epfl/drtvam},
+  	extra-code-title-1={Python package}
+}

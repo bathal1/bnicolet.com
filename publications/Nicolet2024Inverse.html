@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inverse rendering for tomographic volumetric additive manufacturing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/custom.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-light fixed-top py-0 bg-dark text-light">
+        <div class="container">
+            <a class="navbar-brand text-light" href="/index.html">
+                Baptiste Nicolet
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="icon" href="https://github.com/bathal1">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://scholar.google.com/citations?hl=en&user=ELcZ3isAAAAJ">
+                            <i class="ai ai-google-scholar-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://www.linkedin.com/in/baptiste-nicolet-44561b134/?locale=en_US">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="icon" href="https://twitter.com/b_nicolet">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <h1 class="row-margin-10">Inverse rendering for tomographic volumetric additive manufacturing</h1>
+
+    <div>
+        <span>
+<a href="/index.html">Baptiste Nicolet</a><sup><small>1</small></sup></span>
+        <span>
+<a href="https://www.felixwechsler.science/">Felix Wechsler</a><sup><small>1</small></sup></span>
+        <span>
+<a href="https://www.linkedin.com/in/jorge-madrid-wolff/">Jorge Madrid-Wolff</a><sup><small>1</small></sup></span>
+        <span>
+<a href="https://people.epfl.ch/christophe.moser">Christophe Moser</a><sup><small>1</small></sup></span>
+        <span>
+<a href="https://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a><sup><small>1</small></sup></span>
+    </div>
+
+    <div>
+        <span><sup><small>1</small></sup><span>École Polytechnique Fédérale de Lausanne (EPFL), Switzerland</span></span>
+    </div>
+
+    <h4>
+In <em>Transactions on Graphics (Proceedings of SIGGRAPH Asia)</em>, 2024    </h4>
+
+    <div>
+        <img src="images/Nicolet2024Inverse-teaser.png" alt="Teaser" style="max-width: 100%;"/>
+
+        <div>
+            (a) Tomographic Volumetric Additive Manufacturing fabricates objects by projecting light patterns onto a rotating vial of photo-sensitive resin. We introduce a differentiable rendering framework that (b) can simulate scattering of light in arbitrary resins and (c) compute appropriate patterns for fabrication. Our method enables several applications, such as (d) printing in scattering resins or (e) unusual geometries such as square vials.
+        </div>
+    </div>
+
+    <div class="row-margin-10">
+        <h3>Abstract</h3>
+        <div>
+            <p>
+                Tomographic Volumetric Additive Manufacturing (TVAM) is an emerging 3D printing technology that can create complex objects in under a minute. The key idea is to project intense light patterns onto a rotating vial of photo-sensitive resin, causing polymerization where the cumulative dose of these patterns reaches the polymerization threshold. We formulate the pattern calculation as an inverse light transport problem and solve it via physically based differentiable rendering. In doing so, we address long-standing limitations of prior work by accurately modeling and correcting for scattering in composite resins, printing in non-symmetric vials, and supporting unusual printing geometries. We also introduce an improved discretization scheme that exploits the ray tracing operation to mitigate resolution-related artifacts in prints. We demonstrate the benefits of our method in real-world experiments, where our computed patterns produce prints with an improved fidelity.
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <h3>Downloads</h3>
+        <div>
+            <ul class="list-unstyled">
+                <li>
+                    <h5>Publication:</h5>
+                    <ul class="fa-ul">
+                        <li class="pdf">
+                            <span class="fa-li"><i class="far fa-file-pdf" aria-hidden="true"></i></span>
+                            <a href="Nicolet2024Inverse.pdf">Paper</a>
+                        </li>
+                        <li class="doi-link">
+                            <span class="fa-li"><i class="far fa-file-pdf" aria-hidden="true"></i></span>
+                            <a href="https://doi.org/10.1145/3687924">Publisher's official version (may require a subscription)</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+                <li><h5>Code:</h5>
+                    <ul class="fa-ul">
+                        <li class="code">
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a href="https://github.com/rgl-epfl/drtvam">Python package</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div>
+        <h3 class="panel-title">Reference</h3>
+        <div>
+<a href="/index.html">Baptiste Nicolet</a>, <a href="https://www.felixwechsler.science/">Felix Wechsler</a>, <a href="https://www.linkedin.com/in/jorge-madrid-wolff/">Jorge Madrid-Wolff</a>, <a href="https://people.epfl.ch/christophe.moser">Christophe Moser</a>, <a href="https://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a>.            Inverse rendering for tomographic volumetric additive manufacturing.
+            <em>Transactions on Graphics (Proceedings of <b>SIGGRAPH Asia</b>)</em>, 43(6):1-17, December 2024.
+        </div>
+
+        <pre class="bibtex">@article{Nicolet2024Inverse,
+    author = "Nicolet, Baptiste and Wechsler, Felix and Madrid-Wolff, Jorge and Moser, Christophe and Jakob, Wenzel",
+    title = "Inverse Rendering for Tomographic Volumetric Additive Manufacturing",
+    journal = "Transactions on Graphics (Proceedings of SIGGRAPH Asia)",
+    volume = "43",
+    number = "6",
+    pages = "1-17",
+    year = "2024",
+    month = dec,
+    doi = "10.1145/3687924",
+    url = "https://rgl.epfl.ch/publications/Nicolet2024Inverse"
+}
+</pre>
+    </div>
+    </div>
+    <!-- .container -->
+
+    <div class="container bg-light" id="footer">
+        <p>&copy; 2021-2025 Baptiste Nicolet</p>
+    </div>
+
+
+</body>
+</html>
