@@ -35,6 +35,9 @@ p {
     vertical-align: middle;
 }
 
+.list-inline-item {
+    margin-right: 0px !important;
+}
 
 .profile {
     border: 3px solid #454545;

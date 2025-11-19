@@ -9,11 +9,12 @@
     </div>
     <div class="col-sm-5 offset-sm-1">
         <h1>Baptiste Nicolet<h1/>
-        <h4><em>Doctoral Assistant</em></h4>
+        <h4><em>Senior Research Scientist</em></h4>
+        <h4>NVIDIA</h4>
         <ul class="fa-ul">
             <li>
                 <span class="fa-li"><i class="fas fa-map-pin fa-lg"></i></span>
-                Geneva, Switzerland
+                <p>Geneva, Switzerland</p>
             </li>
             <li>
                 <span class="fa-li"><i class="fas fa-envelope fa-lg"></i></span>
@@ -21,7 +22,7 @@
             </li>
             <li>
                 <span class="fa-li"><i class="fas fa-file-alt fa-lg"></i></span>
-                <a href="CV.pdf">CV</a>
+                <p><a href="CV.pdf">CV</a></p>
             </li>
         </ul>
     </div>
@@ -30,7 +31,7 @@
 <h2 class="row-margin-10" id="about">About me</h2>
 <p>
     I am a Senior Research Scientist at <a href="https://research.nvidia.com/person/baptiste-nicolet">NVIDIA</a>.
-    Prior to joining NVIDIA, I obtained a Ph.D. from the <a href="http://rgl.epfl.ch">Realistic Graphics Lab</a> at
+    Prior to that, I completed Ph.D. in the <a href="http://rgl.epfl.ch">Realistic Graphics Lab</a> at
     <a href="https://ic.epfl.ch/">EPFL</a>, supervised by
     <a href="http://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a>.
 </p>
@@ -40,27 +41,15 @@
 </p>
 
 <h2 id="publications">Publications</h2>
-<!--
-    <p>
-        This is an example academic publication page, along with accompanying project pages and downloads. You can also check out the <a href="{{ siteroot }}example_cv.pdf">CV</a> generated from the same bib file as a PDF download</a>.
-    </p>
-
-    <div class="alert alert-info text-right" role="alert">
-        <strong>Total citation count: {{ total_citations }}</strong>.<br />
-        <small>Citation counts are scraped from my Google Scholar profile. Numbers are approximate.</small>
-    </div>
--->
 <!-- Tab panes -->
-<div class="content">
+<div class="content row-margin-20">
     <div id="allPublications">
 
-        <!-- <h3>Journals and Conferences</h3> -->
-        {% for year in years %}
-        <!-- <h4 id="year{{ year.year }}">{{ year.year }}</h4> -->
         <ul class="list-unstyled">
+        {% for year in years %}
         {% for paper in year.papers|rejectattr("type", "equalto", "patent") %}
             <li>
-                <div class="row row-margin-20">
+                <div class="row">
                     <div class="col-4 col-sm-3 col-md-2">
                         {% if paper.url %}
                         <a href="publications/{{ paper.url }}">
@@ -90,14 +79,14 @@
                                 </li>
                             {% else -%}
                                 <li class="page list-inline-item">
-                                    <a class="btn btn-outline-secondary" href="publications/{{ paper.url }}">
+                                    <a class="btn btn-sm btn-outline-secondary" href="publications/{{ paper.url }}">
                                         <i class="fas fa-globe"></i> Project Page
                                     </a>
                                 </li>
                             {% endif -%}
-                            {% for link in paper.quicklinks %}
+                            {% for link in paper.quicklinks|rejectattr("type", "equalto", "doi-link") %}
                                 <li class="{{ link.type }} list-inline-item">
-                                    <a class="btn btn-outline-secondary" href="{% if link.type=='code' %} {{link.link}} {% else %}{% if not link.external -%}publications/{% endif -%}{{ link.url }}{% endif %}">
+                                    <a class="btn btn-sm btn-outline-secondary" href="{% if link.type=='code' %} {{link.link}} {% else %}{% if not link.external -%}publications/{% endif -%}{{ link.url }}{% endif %}">
                                         {% if link.type=='pdf' %} <i class="far fa-file-pdf"></i>
                                         {% elif link.type=='code' %} <i class="fab fa-github"></i>
                                         {% else %} <i class="far fa-file"></i>
@@ -115,8 +104,8 @@
                 <br/>
             </li>
         {% endfor %}
-        </ul>
         {% endfor %}
+        </ul>
 
     <!--
         <h3 id="patents">Patents</h3>
@@ -146,12 +135,12 @@
 </div>
 
 <h2 id="software">Software</h2>
-<div class="content">
+<div class="content row-margin-20">
     <div id="allSoftware">
         <ul class="list-unstyled">
             {% for software in softwares %}
                 <li>
-                    <div class="row row-margin-20">
+                    <div class="row">
                         <div class="col-4 col-sm-3 col-md-2">
                             {% if software.url %}
                             <a href="{{ software.url }}">
