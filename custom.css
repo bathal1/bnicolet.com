@@ -27,11 +27,14 @@ p {
     text-justify: inter-word;
 }
 
-.icon {
+.icon i {
     font-size: 40px;
     color: #ffffff;
-    margin-right: 5px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
 }
+
 
 .profile {
     border: 3px solid #454545;
